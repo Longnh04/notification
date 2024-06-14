@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>boopup show</title>
+    <script src="./main.js"></script>
+    <link rel="stylesheet" href="./css.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="btn-click">
+            <button id="btnClick">add to cart</button>
+        </div>
+
+        <div class="box__show-message" id="box-show">
+            <div class="box__icon-before"><i class="fa-solid fa-circle-check"></i></div>
+            <div class="box__content-center">
+                <strong>Success:</strong> product added to cart <br>
+                <p>You've added your product to cart successfull!</p>
+            </div>
+            <div class="box__icon-after"><i id="click-exit" class="fa-solid fa-xmark"></i></div>
+        </div>
+    </div>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const btnclick = document.getElementById("btnClick");
+            const bopx = document.getElementById("box-show");
+
+            const bopxexit = document.getElementById("click-exit");
+
+            btnclick.addEventListener('click', function () {
+                bopx.classList.add('action');
+
+                setTimeout(function() {
+                bopx.classList.remove('action');
+                 }, 3000);
+            })
+
+            bopxexit.addEventListener('click', function () {
+                bopx.classList.remove('action')
+            })
+
+
+
+
+        })
+
+
+    </script>
+
+
+</body>
+
+</html>
